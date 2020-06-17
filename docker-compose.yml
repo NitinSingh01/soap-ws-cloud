@@ -1,0 +1,22 @@
+version: "3"
+services:
+  customer:
+    build: ./customer
+    networks:
+      - customer-net
+    ports:
+      - "8080:8080"  
+  customer-db:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    networks:
+      - customer-net
+    environment:
+      MYSQL_HOST: customer-db
+      MYSQL_USER: sa
+      MYSQL_DATABASE: Customer
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
+networks:
+  customer-net:
