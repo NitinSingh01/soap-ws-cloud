@@ -15,8 +15,8 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  &&
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"  &&
 #Update your package index and install Docker CE
 sudo apt update &&
-curl -O https://download.docker.com/linux/ubuntu/dists/bionic/pool/edge/amd64/containerd.io_1.2.2-3_amd64.deb  &&
-sudo apt install ./containerd.io_1.2.2-3_amd64.deb  &&
+curl -O https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/containerd.io_1.4.3-1_amd64.deb  &&
+sudo apt install ./containerd.io_1.4.3-1_amd64.deb  &&
 sudo apt install docker-ce  -y  &&
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose  &&
 sudo chmod +x /usr/local/bin/docker-compose  &&
